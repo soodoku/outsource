@@ -1,7 +1,7 @@
 ### Outsource: Create Distributed Coding Tasks More Easily
 
 [![GPL-3.0](http://img.shields.io/:license-gpl-blue.svg)](http://opensource.org/licenses/GPL-3.0)
-[![Build Status](https://travis-ci.org/soodoku/abbyyR.svg?branch=master)](https://travis-ci.org/soodoku/outsource)
+[![Build Status](https://travis-ci.org/soodoku/outsource.svg?branch=master)](https://travis-ci.org/soodoku/outsource)
 
 ### The Goal
 
@@ -18,7 +18,7 @@ To start with, the tool will be greared towards making it easy to convert a larg
 * A person doesn't code the same story more than once.
 * Thus each worker would see a version of a survey -- each screen will have some text and a form beneath it. No. of questions per user and no. of people who should code a story can be set by the user. And for now the HTML form can be designed by the user.
 
-Specifically, the tool will take: 
+Specifically, the tool will take the following arguments: 
 
 * Path to directory with input text files
 * Path to basic HTML form
@@ -26,7 +26,7 @@ Specifically, the tool will take:
 * No. of times each story needs to be coded (*n*)
 * No. of stories per worker (*m*)
 
-If there are a total of *k* stories, there will be *kn* times number of tasks and each worker will get *(kn)/m*. We will take the floor of the number and assign new stories to one more worker, who will get less than m. The tool will produce survey with one story and one html form per page and the name of the field would be the name of the story file. Each worker's survey will also have a worker ID and unique job completion ID that can be used to redeem credit.
+If there are a total of *k* stories, there will be *kn* times number of tasks and each worker will get *(kn)/m*. The total number of HITs created would be the ceiling of that number. The tool will produce survey with one story and one html form per page and the name of the field would be the name of the story file. Each worker's survey will also have a worker ID and unique job completion ID that can be used to redeem credit.
 
 ### Installation
 
@@ -40,7 +40,8 @@ devtools::install_github("soodoku/outsource")
 ### Usage
 
 ```{r}
-creator(input_file_dir, output_file_dir, n_per_worker, n_per_story)
+setwd(path.package("outsource"))
+creator(input_files_dir, output_files_dir, n_per_worker, n_per_story)
 ```
 
 #### License
