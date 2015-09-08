@@ -41,7 +41,9 @@ devtools::install_github("soodoku/outsource")
 
 ```{r}
 setwd(path.package("outsource"))
-creator(input_files_dir, output_files_dir, n_per_worker, n_per_story)
+creator(input_files_dir = "inst/extdata/sample_in/", path_to_form="inst/extdata/html_form.html",  output_files_dir="inst/extdata/sample_out/",
+n_per_worker  = 2, n_per_story  = 3)
+
 ```
 
 #### License
