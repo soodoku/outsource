@@ -44,7 +44,12 @@ creator <- function(input_files_dir=NULL, path_to_form=NULL, output_files_dir=NU
 		
 		html_file <- NA		
 		outfile_name   <- paste0(part_name_1[i], part_name_2[i])
-		
+
+		# Not implemented: each html form needs to be rewritten
+		# Unique completion ID
+		# Links between HTML pages
+		# Sample style sheets for better text rendering
+
 		# Build file
 		for(j in list_files[stories[[i]]]) {
 			story_i   <- read_file(paste0(input_files_dir, j))
