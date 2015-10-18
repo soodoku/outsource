@@ -47,4 +47,4 @@ n_per_worker  = 2, n_per_story  = 3)
 ```
 
 #### License
-Scripts are released under [GNU V3](http://www.gnu.org/licenses/gpl-3.0.en.html).
+Scripts are released under the [MIT License]().
