@@ -1,4 +1,4 @@
-### Outsource: Create Distributed Coding Tasks More Easily
+## Outsource: Create Distributed Coding Tasks More Easily
 
 [![GPL-3.0](http://img.shields.io/:license-gpl-blue.svg)](http://opensource.org/licenses/GPL-3.0)
 [![Build Status](https://travis-ci.org/soodoku/outsource.svg?branch=master)](https://travis-ci.org/soodoku/outsource)
@@ -9,7 +9,7 @@ The goal is to make it easier to produce distributed Human Intelligence Tasks (H
 
 The general idea traces its ancestry to CAPTCHA, which was developed to solve two problems at the same time --- provide a way to websites to distinguish between humans and bots, and help OCR written (or heard) material. But the current technology differs from CAPTCHA in three ways. First, our goal is to not try to solve two problems at once. Thus, instead of current CAPTCHA systems, which make it as hard as possible for humans to get the answer right, we want to invert that logic -- make it as easy for humans to get the answer right. Second, we want to build it for tasks other than recognition tasks. Third, we want to attach it to a payment architecture -- a micro-task market like Amazon-M-turk or a barter system where people do a small task for free access to content, e.g. Google Consumer Surveys.
 
-#### The MVP
+### The MVP
 
 To start with, the tool will be greared towards making it easy to convert a large project into tasks that can be posted 'micro-task' markets like Amazon M-Turk and Crowdflower. And initially, we limit the tool to coding of texts. The tool would take a directory of text files and create tasks as suggested by the user and spit out tasks. The general architecture of coding text is as follows:
 
@@ -32,23 +32,20 @@ If there are a total of *k* stories, there will be *kn* times number of tasks an
 
 To get the current development version from github:
 
-```{r install}
+```r
 # install.packages("devtools")
 devtools::install_github("soodoku/outsource")
 ```
 
 ### Usage
 
-```{r}
+```r
 setwd(path.package("outsource"))
-creator(input_files_dir = "inst/extdata/sample_in/", path_to_form="inst/extdata/html_form.html",  output_files_dir="inst/extdata/sample_out/",
-n_per_worker  = 2, n_per_story  = 3)
-
+creator(input_files_dir = "inst/extdata/sample_in/", 
+	path_to_form="inst/extdata/html_form.html",  
+	output_files_dir="inst/extdata/sample_out/",
+	n_per_worker  = 2, n_per_story  = 3)
 ```
 
-#### License
-<<<<<<< HEAD:Readme.md
-Scripts are released under the [MIT License]().
-=======
-Scripts are released under [GNU V3](http://www.gnu.org/licenses/gpl-3.0.en.html).
->>>>>>> origin/master:README.md
+### License
+Scripts are released under [GNU V3](http://www.gnu.org/licenses/gpl-3.0.en.html)
